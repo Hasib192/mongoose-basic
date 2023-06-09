@@ -4,13 +4,13 @@ const productSchema = new mongoose.Schema(
   {
     name: {
       type: String,
+      required: [true, "Name is required"],
     },
     price: {
       type: Number,
+      required: [true, "Price is required"],
     },
-    description: {
-      type: String,
-    },
+    description: String,
   },
   {
     timestamps: { createdAt: true, updatedAt: false },
