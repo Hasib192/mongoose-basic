@@ -14,7 +14,8 @@ exports.authenticate = (req, res, next) => {
     next();
   } catch (error) {
     return res.status(401).json({
-      message: "Failed to authorize",
+      status: "Fail",
+      data: error,
     });
   }
 };
